@@ -10,23 +10,24 @@
 # 중요도가 같은 문서가 여러 개 있을 수도 있다.
 
 
-N, M, A = [], [], []
 x = int(input()) #테스트케이스의 수
+all_result = []
 for _ in range(x) :
-    n, m = input().split() # 문서의 개수, 현재 Queue에서 몇 번째
-    a = input().split() # 문서의 중요도 # list ['1', '2', '3', '4']
-    N.append(n)
-    M.append(m)
-    A.append(a)
+    n, m = map(int, input().split())
+    data = list(map(int, input().split()))
 
-#max(A) 값 위치 찾기 -> 
+    result = 1
+    while data :
+        if data[0] < max(data):
+            data.append(data.pop(0))
+        else:
+            if m ==0 : 
+                break
+            data.pop(0)
+            result += 1
+        m = m-1 if m>0 else len(data) - 1
+    all_result.append(result)
+for r in all_result :
+    print(r)
 
-print_ = [] # 최종 출력값
-for i in range(x) :
-    print_A = []
-    for a, k in enumerate(A[i]) :
-        if a == max(A[i]) :
-            print_A.append(a)
-            start_k = k
-            quit
 
