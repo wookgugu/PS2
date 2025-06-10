@@ -14,4 +14,4 @@ for i in range(M) :
 for i in graph:
     i.sort()
 
-print(graph)
+# dfs 또는 bfs를 수행하는 횟수 : 연결 요소의 개수
