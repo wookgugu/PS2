@@ -1,3 +1,5 @@
+from collections import deque
+
 def bfs(x, y) :
     directions = [(-1,0), (1,0), (0,1), (0,-1)]
     queue = deque()
