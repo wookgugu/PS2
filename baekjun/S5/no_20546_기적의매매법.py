@@ -1,0 +1,2 @@
+def jun(money, jusic) :
+    
