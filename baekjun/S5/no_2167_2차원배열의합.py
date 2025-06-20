@@ -12,6 +12,6 @@ for _ in range(K):
         for m in range(j-1,y) :
             ans += int(nums[n][m])
     answer.append(ans)
-    
+
 for a in answer :
     print(a)
